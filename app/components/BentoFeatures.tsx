@@ -23,7 +23,7 @@ export default function BentoFeatures() {
                 transition={{ duration: 0.6 }}
                 className="mb-4"
             >
-                <span className="inline-block bg-card-bg border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
+                <span className="inline-block bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
                     Habits with structure
                 </span>
             </motion.div>
@@ -65,7 +65,7 @@ export default function BentoFeatures() {
                 <motion.div
                     variants={fadeInUp}
                     transition={{ duration: 0.5 }}
-                    className="bg-card-bg rounded-3xl p-8 relative overflow-hidden"
+                    className="bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl rounded-3xl p-8 relative overflow-hidden"
                 >
                     <h3 className="text-xl font-bold text-text-main mb-2">Flexible streak rules</h3>
                     <p className="text-text-muted text-sm mb-8 max-w-xs">
@@ -261,7 +261,7 @@ export default function BentoFeatures() {
                 <motion.div
                     variants={fadeInUp}
                     transition={{ duration: 0.5 }}
-                    className="bg-card-bg rounded-3xl p-8 relative overflow-hidden"
+                    className="bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl rounded-3xl p-8 relative overflow-hidden"
                 >
                     <h3 className="text-xl font-bold text-text-main mb-2">Gentle reminders</h3>
                     <p className="text-text-muted text-sm mb-6">
@@ -277,7 +277,7 @@ export default function BentoFeatures() {
                                 <button className="bg-[#1D1D1F] text-white text-[12px] font-medium rounded-full px-4 py-1.5">
                                     I&apos;m on it
                                 </button>
-                                <button className="bg-card-bg text-text-muted text-[12px] font-medium rounded-full px-4 py-1.5">
+                                <button className="bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl text-text-muted text-[12px] font-medium rounded-full px-4 py-1.5">
                                     Later
                                 </button>
                             </div>

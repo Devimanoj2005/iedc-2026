@@ -111,10 +111,10 @@ function useCountUp(target: number, duration: number = 2000) {
 }
 
 export default function MetricsSection() {
-    const counter = useCountUp(62000, 2500);
+    const counter = useCountUp(3500, 2500);
 
     return (
-        <section id="metrics" className="py-20 md:py-32 overflow-hidden">
+        <section id="resources" className="py-20 md:py-32 overflow-hidden">
             <div className="max-w-6xl mx-auto px-6">
                 {/* Header */}
                 <motion.div
@@ -125,13 +125,13 @@ export default function MetricsSection() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-8"
                 >
-                    <span className="inline-block bg-card-bg border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
-                        Real habits, real numbers
+                    <span className="inline-block bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
+                        Real ideas, real impact
                     </span>
                     <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-text-main mb-6">
-                        How people stay
+                        How we help ideas
                         <br />
-                        consistent over time
+                        become reality
                     </h2>
                 </motion.div>
 
@@ -148,7 +148,7 @@ export default function MetricsSection() {
                     <div className="text-6xl md:text-8xl lg:text-[120px] font-bold text-primary leading-none">
                         {counter.count.toLocaleString()}+
                     </div>
-                    <p className="text-text-muted text-sm mt-2">Check-ins logged last month</p>
+                    <p className="text-text-muted text-sm mt-2">Ideas generated</p>
                 </motion.div>
 
                 {/* Earth globe */}
@@ -161,7 +161,7 @@ export default function MetricsSection() {
                     className="relative flex justify-center my-12"
                 >
                     <div className="relative w-full max-w-2xl h-[400px] md:h-[500px]">
-                        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-white z-40" />
+                        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-[#FFFAF8] z-40" />
                         <div className="absolute inset-0 h-full z-10 p-2 md:p-6 drop-shadow-2xl">
                             <World data={sampleArcs} globeConfig={globeConfig} />
                         </div>
@@ -181,20 +181,20 @@ export default function MetricsSection() {
                         <p className="text-4xl md:text-5xl font-bold text-primary">
                             87<span className="text-primary">%</span>
                         </p>
-                        <p className="text-text-muted text-sm mt-2">Faster AI execution</p>
+                        <p className="text-text-muted text-sm mt-2">Faster ideation</p>
                     </div>
                     <div className="text-center">
-                        <p className="text-4xl md:text-5xl font-bold text-text-main">46</p>
-                        <p className="text-text-muted text-sm mt-2">Sessions completed on average</p>
+                        <p className="text-4xl md:text-5xl font-bold text-text-main">10<span className="text-primary">+</span></p>
+                        <p className="text-text-muted text-sm mt-2">Startups Incubated</p>
                     </div>
                     <div className="text-center">
                         <p className="text-4xl md:text-5xl font-bold text-text-main">
-                            32<span className="text-primary">+</span>
+                            3000<span className="text-primary">+</span>
                         </p>
                         <p className="text-text-muted text-sm mt-2">
-                            Countries with active
+                            Active
                             <br />
-                            Habitline users
+                            IEDC members
                         </p>
                     </div>
                 </motion.div>

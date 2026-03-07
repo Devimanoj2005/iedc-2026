@@ -37,7 +37,7 @@ const aiFeatures = [
 
 export default function AISmartAssist() {
     return (
-        <section id="smart-assist" className="py-20 md:py-32 max-w-6xl mx-auto px-6">
+        <section id="startups" className="py-20 md:py-32 max-w-6xl mx-auto px-6">
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
                 {/* Left side - Text */}
                 <div className="lg:w-1/2">
@@ -48,7 +48,7 @@ export default function AISmartAssist() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <span className="inline-block bg-card-bg border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
+                        <span className="inline-block bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
                             Smarter habits, less thinking
                         </span>
                         <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-text-main leading-tight mb-6">
@@ -80,7 +80,7 @@ export default function AISmartAssist() {
                             <motion.div
                                 key={i}
                                 whileHover={{ y: -2 }}
-                                className="bg-card-bg rounded-2xl p-4 group cursor-default"
+                                className="bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl rounded-2xl p-4 group cursor-default"
                             >
                                 <div className={`w-10 h-10 rounded-xl ${feature.color} flex items-center justify-center mb-3`}>
                                     <feature.icon size={18} />
@@ -142,11 +142,11 @@ export default function AISmartAssist() {
 
                                     {/* Habits */}
                                     <div className="space-y-2 mt-2">
-                                        <div className="flex items-center gap-2 bg-card-bg rounded-lg p-2">
+                                        <div className="flex items-center gap-2 bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl rounded-lg p-2">
                                             <div className="w-2 h-2 bg-green-500 rounded-full" />
                                             <span className="text-[11px] font-medium">Morning stretch</span>
                                         </div>
-                                        <div className="flex items-center gap-2 bg-card-bg rounded-lg p-2">
+                                        <div className="flex items-center gap-2 bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl rounded-lg p-2">
                                             <div className="w-2 h-2 bg-orange-500 rounded-full" />
                                             <span className="text-[11px] font-medium">Focus block</span>
                                         </div>

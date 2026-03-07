@@ -67,7 +67,7 @@ export default function TestimonialsGrid() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-4"
             >
-                <span className="inline-block bg-card-bg border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
+                <span className="inline-block bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
                     A closer look
                 </span>
                 <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-text-main mb-4">
@@ -94,7 +94,7 @@ export default function TestimonialsGrid() {
                     { name: "Olivia Park", role: "Project Manager" },
                     { name: "Ryan Cooper", role: "Software Developer" },
                 ].map((person, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-card-bg border border-border rounded-full px-3 py-1.5 shrink-0">
+                    <div key={i} className="flex items-center gap-2 bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl border border-border rounded-full px-3 py-1.5 shrink-0">
                         <div className="w-7 h-7 rounded-full bg-gradient-to-br from-gray-300 to-gray-500" />
                         <div>
                             <p className="text-[11px] font-medium text-text-main">{person.name}</p>
@@ -114,7 +114,7 @@ export default function TestimonialsGrid() {
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: i * 0.05 }}
-                        className="break-inside-avoid bg-card-bg rounded-2xl p-6 border border-border/50"
+                        className="break-inside-avoid bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl rounded-2xl p-6 border border-border/50"
                     >
                         <p className="text-text-main text-sm leading-relaxed mb-4">{t.quote}</p>
                         <div className="flex items-center justify-between">

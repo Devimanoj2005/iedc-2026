@@ -9,10 +9,10 @@ const fadeInUp = {
 };
 
 const quickLinks = [
-    { label: "About IEDC", href: "#features" },
-    { label: "Events", href: "#use-case" },
-    { label: "Startups", href: "#metrics" },
-    { label: "Resources", href: "#smart-assist" },
+    { label: "About IEDC", href: "/#features" },
+    { label: "Events", href: "/#use-case" },
+    { label: "Execom", href: "/execom" },
+    { label: "Startups", href: "/#startups" },
 ];
 
 const pages = [
@@ -121,7 +121,7 @@ export default function Footer() {
                     className="flex flex-col md:flex-row items-center justify-between mt-16 pt-6 border-t border-border gap-4"
                 >
                     <p className="text-text-muted text-sm">
-                        Designed by <a href="https://www.webestica.com/" target="_blank" rel="noopener noreferrer" className="text-text-main hover:underline font-medium">Tech Team IEDC</a>.
+                        Designed by <a href="https://" target="_blank" rel="noopener noreferrer" className="text-text-main hover:underline font-medium">Tech Team</a>.
                     </p>
                     <div className="flex items-center gap-3">
                         <a href="#" className="w-9 h-9 bg-card-bg rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">

@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-    { label: "About IEDC", href: "#features" },
-    { label: "Events", href: "#use-case" },
-    { label: "Startups", href: "#metrics" },
-    { label: "Resources", href: "#smart-assist" },
+    { label: "About IEDC", href: "/#features" },
+    { label: "Events", href: "/#use-case" },
+    { label: "Startups", href: "/#startups" },
+    { label: "Execom", href: "/execom" },
+
 ];
 
 export default function FloatingNavbar() {

@@ -49,7 +49,7 @@ export default function UseCaseTabs() {
                 transition={{ duration: 0.6 }}
                 className="text-center mb-12"
             >
-                <span className="inline-block bg-card-bg border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
+                <span className="inline-block bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl border border-border text-text-muted text-xs font-medium px-3.5 py-1.5 rounded-full mb-4">
                     Fits every lifestyle
                 </span>
                 <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-text-main mb-4">
@@ -73,8 +73,8 @@ export default function UseCaseTabs() {
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
                         className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${activeTab === tab.id
-                                ? "bg-[#1D1D1F] text-white"
-                                : "bg-card-bg text-text-muted hover:text-text-main border border-border"
+                            ? "bg-[#1D1D1F] text-white"
+                            : "bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl text-text-muted hover:text-text-main border border-border"
                             }`}
                     >
                         {tab.label}
@@ -92,7 +92,7 @@ export default function UseCaseTabs() {
                     transition={{ duration: 0.3 }}
                     className="max-w-2xl mx-auto"
                 >
-                    <div className="bg-card-bg rounded-3xl p-8">
+                    <div className="bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl rounded-3xl p-8">
                         <p className="text-text-main text-sm leading-relaxed mb-6">{currentTab.description}</p>
                         <div className="flex items-center justify-between mb-2">
                             <span className="text-text-main text-sm font-medium">Weekly consistency</span>

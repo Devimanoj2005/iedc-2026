@@ -11,7 +11,7 @@ const fadeInUp = {
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-0 overflow-hidden bg-white">
+        <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-0 overflow-hidden bg-transparent">
             {/* Background Image & Overlays */}
             <div className="absolute inset-0 z-0 bg-[#0A0A0A] overflow-hidden h-[85%]">
                 <Image
@@ -21,7 +21,7 @@ export default function HeroSection() {
                     className="object-cover opacity-60 mix-blend-luminosity"
                     priority
                 />
-                {/* Dark to Orange Gradient Overlay */}
+
                 <div className="absolute inset-0 bg-gradient-to-br from-[#110A05]/90 via-[#4A1D00]/70 to-[#FF7A00]/50 mix-blend-multiply" />
                 <div className="absolute inset-0 bg-black/20" />
 
@@ -30,10 +30,10 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#FF7A00]/50 rounded-full blur-[120px]" />
             </div>
 
-            {/* White Blur Gradient Bottom Curve */}
+
             <div className="absolute bottom-0 left-0 w-full z-0 flex flex-col justify-end h-[400px]">
                 {/* Massive blur glow behind curve */}
-                <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-[120%] max-w-[2000px] h-[250px] bg-white opacity-60 blur-[60px] rounded-[100%]" />
+                <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-[120%] max-w-[2000px] h-[250px] bg-[#FFFAF8] opacity-60 blur-[60px] rounded-[100%]" />
 
                 {/* Solid curve */}
                 <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="block w-full h-[150px] md:h-[220px] relative z-10 bottom-[-2px]">
@@ -43,12 +43,12 @@ export default function HeroSection() {
                         d="M0,80 C480,280 960,280 1440,80 L1440,320 L0,320 Z"
                     />
                     <path
-                        fill="#ffffff"
+                        fill="#FFFAF8"
                         d="M0,120 C480,300 960,300 1440,120 L1440,320 L0,320 Z"
                     />
                 </svg>
                 {/* Solid white bottom block to fill any gaps */}
-                <div className="w-full h-10 bg-white relative z-10" />
+                <div className="w-full h-10 bg-[#FFFAF8] relative z-10" />
             </div>
 
             {/* Content Container */}

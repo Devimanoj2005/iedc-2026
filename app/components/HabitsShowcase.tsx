@@ -28,7 +28,7 @@ const Marquee = ({ className, reverse, pauseOnHover = false, children }: any) =>
 };
 
 const IconCard = ({ title, desc, icon, color }: any) => (
-    <div className="w-32 h-32 md:w-36 md:h-36 bg-white flex-shrink-0 rounded-2xl shadow-xl border border-gray-100 flex flex-col items-center justify-center p-3">
+    <div className="w-32 h-32 md:w-36 md:h-36 bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl flex-shrink-0 rounded-2xl shadow-xl border border-gray-100 flex flex-col items-center justify-center p-3">
         <div className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white text-xl md:text-2xl mb-3 shadow-[0_4px_14px_0_rgba(0,0,0,0.2)]" style={{ backgroundColor: color }}>
             {icon}
         </div>
@@ -89,7 +89,7 @@ export default function HabitsShowcase() {
                 {["#Founders", "#Students", "#Busy parents", "#Remote teams"].map((tag) => (
                     <span
                         key={tag}
-                        className="bg-card-bg border border-border text-text-main text-xs font-medium px-3.5 py-1.5 rounded-full"
+                        className="bg-white/40 backdrop-blur-xl border border-white/20 transition-all duration-300 hover:bg-white/50 hover:shadow-xl border border-border text-text-main text-xs font-medium px-3.5 py-1.5 rounded-full"
                     >
                         {tag}
                     </span>
