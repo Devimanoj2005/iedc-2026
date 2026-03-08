@@ -1,15 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import FloatingNavbar from "../../components/FloatingNavbar";
 import Footer from "../../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { Linkedin, Mail, X, ArrowLeft, ArrowRight } from "lucide-react";
 import { execomHistory, Member } from "../data";
 
-export default function PastExecomPage() {
-    const [selectedYear, setSelectedYear] = useState<string | null>(null);
+function PastExecomContent() {
+    const router = useRouter();
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+
+    // Read the year param from URL, replacing '-' back to '/' for data matching
+    const rawYearParam = searchParams.get("year");
+    const selectedYear = rawYearParam ? rawYearParam.replace("-", "/") : null;
+
     const [selectedLead, setSelectedLead] = useState<Member | null>(null);
+
+    // Function to update URL state
+    const handleSetYear = (year: string | null) => {
+        if (!year) {
+            router.push(pathname); // Clears params, goes back to legacy list
+        } else {
+            router.push(`${pathname}?year=${year.replace("/", "-")}`);
+        }
+    };
 
     // Filter out current year
     const pastYears = execomHistory.filter(e => e.year !== "26/27");
@@ -32,7 +49,7 @@ export default function PastExecomPage() {
         <main className="relative min-h-screen text-black overflow-hidden bg-[#FFFAF8]">
             {/* Background elements */}
             <div className="fixed inset-0 z-0 select-none pointer-events-none">
-                <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-[#FF7A00]/15 rounded-full blur-[120px] animate-pulse" />
+                <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-primary/15 rounded-full blur-[120px] animate-pulse" />
                 <div className="absolute inset-0 flex items-center justify-center overflow-hidden text-black/[0.015]">
                     <h2 className="text-[35vw] font-black leading-none tracking-tighter select-none uppercase">
                         {selectedYear ? "HISTORY" : "LEGACY"}
@@ -84,7 +101,7 @@ export default function PastExecomPage() {
                                     <motion.div
                                         key={entry.year}
                                         variants={itemVariants}
-                                        onClick={() => setSelectedYear(entry.year)}
+                                        onClick={() => handleSetYear(entry.year)}
                                         className="group relative h-64 rounded-[2.5rem] overflow-hidden cursor-pointer border border-black/5 bg-white/40 backdrop-blur-md hover:bg-black transition-all duration-500 shadow-xl shadow-black/5"
                                     >
                                         <div className="absolute inset-0 bg-gradient-to-br from-[#FF7A00]/20 to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
@@ -120,7 +137,7 @@ export default function PastExecomPage() {
                         >
                             <div className="pt-48 pb-12 px-6 max-w-7xl mx-auto w-full">
                                 <button
-                                    onClick={() => setSelectedYear(null)}
+                                    onClick={() => handleSetYear(null)}
                                     className="group flex items-center gap-2 text-black/40 hover:text-[#FF7A00] font-bold text-sm uppercase tracking-widest mb-12 transition-colors"
                                 >
                                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
@@ -271,6 +288,14 @@ export default function PastExecomPage() {
                 )}
             </AnimatePresence>
         </main>
+    );
+}
+
+export default function PastExecomPage() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-[#FFFAF8] flex items-center justify-center text-[#FF7A00] font-bold tracking-widest uppercase">Loading Legacy...</div>}>
+            <PastExecomContent />
+        </Suspense>
     );
 }
 
