@@ -4,14 +4,12 @@ import { useState } from "react";
 import FloatingNavbar from "../../components/FloatingNavbar";
 import Footer from "../../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
-import { Linkedin, Mail, X, ArrowLeft, ArrowRight } from "lucide-react";
+import { Linkedin, ArrowLeft, ArrowRight } from "lucide-react";
 import { execomHistory, Member } from "../data";
 
 export default function PastExecomPage() {
     const [selectedYear, setSelectedYear] = useState<string | null>(null);
-    const [selectedLead, setSelectedLead] = useState<Member | null>(null);
 
-    // Filter out current year
     const pastYears = execomHistory.filter(e => e.year !== "26/27");
     const currentData = execomHistory.find(e => e.year === selectedYear);
 
@@ -96,7 +94,7 @@ export default function PastExecomPage() {
 
                                         <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between">
                                             <p className="text-sm font-medium text-gray-500 group-hover:text-gray-400 transition-colors">
-                                                {entry.leads.length} Leads • {entry.teamSections.length} Departments
+                                                {entry.teamSections.length} Departments
                                             </p>
                                             <div className="w-12 h-12 rounded-full bg-black group-hover:bg-[#FF7A00] flex items-center justify-center transition-all translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 shadow-lg shadow-[#FF7A00]/20">
                                                 <ArrowRight size={20} className="text-white" />
@@ -137,48 +135,6 @@ export default function PastExecomPage() {
 
                             {currentData && (
                                 <>
-                                    <section className="h-[60vh] md:h-[75vh] min-h-[500px] flex overflow-hidden border-y border-white/5">
-                                        {currentData.leads.map((lead, index) => (
-                                            <motion.div
-                                                key={`${selectedYear}-${index}`}
-                                                initial={{ scaleX: 0 }}
-                                                animate={{ scaleX: 1 }}
-                                                transition={{ duration: 0.8, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                                                onClick={() => setSelectedLead(lead)}
-                                                className="relative flex-1 group cursor-pointer overflow-hidden border-r border-white/5 last:border-r-0 hover:flex-[1.5] transition-all duration-700 ease-out"
-                                            >
-                                                <div className="absolute inset-0 flex items-center justify-center opacity-[0.03] text-[40vw] font-black select-none pointer-events-none group-hover:opacity-[0.05] transition-opacity">
-                                                    {lead.letter}
-                                                </div>
-                                                <div className="absolute inset-0 bg-[#FF7A00]/10 group-hover:bg-[#FF7A00]/0 transition-colors duration-500">
-                                                    <img
-                                                        src={lead.image}
-                                                        alt={lead.name}
-                                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
-                                                    />
-                                                </div>
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-                                                <div className="absolute left-1/2 -translate-x-1/2 bottom-12 whitespace-nowrap hidden md:block group-hover:opacity-0 transition-opacity">
-                                                    <p className="text-xs font-bold tracking-[0.4em] uppercase text-[#FF7A00] rotate-180 [writing-mode:vertical-rl]">
-                                                        {lead.role}
-                                                    </p>
-                                                </div>
-                                                <div className="absolute inset-0 flex flex-col justify-end p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                    <motion.div
-                                                        initial={{ y: 20 }}
-                                                        whileHover={{ y: 0 }}
-                                                        className="space-y-2 text-white"
-                                                    >
-                                                        <h3 className="text-2xl font-bold leading-none">{lead.name}</h3>
-                                                        <p className="text-[#FF7A00] font-medium text-sm">{lead.role}</p>
-                                                        <div className="pt-4">
-                                                            <span className="text-[10px] uppercase tracking-widest font-black text-white/50 border border-white/20 px-3 py-1 rounded-full">Explore Profile</span>
-                                                        </div>
-                                                    </motion.div>
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                    </section>
 
                                     <section className="pb-32 pt-24 space-y-24">
                                         {currentData.teamSections.map((section, sIndex) => (
@@ -219,57 +175,6 @@ export default function PastExecomPage() {
                 <Footer />
             </div>
 
-            {/* Sidebar Details Drawer */}
-            <AnimatePresence>
-                {selectedLead && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setSelectedLead(null)}
-                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100]"
-                        />
-                        <motion.div
-                            initial={{ x: "100%" }}
-                            animate={{ x: 0 }}
-                            exit={{ x: "100%" }}
-                            transition={{ type: "spring", damping: 30, stiffness: 200 }}
-                            className="fixed right-0 top-0 bottom-0 w-full md:w-[450px] bg-[#111] z-[101] p-10 shadow-2xl overflow-y-auto"
-                        >
-                            <button
-                                onClick={() => setSelectedLead(null)}
-                                className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors text-white"
-                            >
-                                <X size={20} />
-                            </button>
-                            <div className="mt-8 text-white">
-                                <span className="text-[#FF7A00] text-xs font-bold tracking-[0.2em] mb-4 block uppercase">{selectedLead.role}</span>
-                                <h2 className="text-4xl font-bold mb-6">{selectedLead.name}</h2>
-                                <div className="aspect-[4/5] rounded-3xl overflow-hidden mb-8 border border-white/10">
-                                    <img src={selectedLead.image} alt={selectedLead.name} className="w-full h-full object-cover" />
-                                </div>
-                                <div className="space-y-6">
-                                    <div>
-                                        <h4 className="text-xs font-bold text-white/30 uppercase tracking-widest mb-2">Biography</h4>
-                                        <p className="text-gray-400 leading-relaxed text-[15px]">
-                                            {selectedLead.bio}
-                                        </p>
-                                    </div>
-                                    <div className="pt-6 flex gap-4">
-                                        <a href={selectedLead.linkedin} className="flex-1 bg-white text-black h-14 rounded-2xl flex items-center justify-center gap-2 font-bold hover:bg-gray-200 transition-colors">
-                                            <Linkedin size={18} /> LinkedIn
-                                        </a>
-                                        <a href={`mailto:${selectedLead.email}`} className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10">
-                                            <Mail size={18} />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </>
-                )}
-            </AnimatePresence>
         </main>
     );
 }
