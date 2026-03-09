@@ -10,10 +10,10 @@ const fadeInUp = {
 };
 
 const quickLinks = [
-    { label: "About IEDC", href: "/#features" },
-    { label: "Events", href: "/#use-case" },
+    { label: "About IEDC", href: "/about" },
+    { label: "Events", href: "/events" },
     { label: "Execom", href: "/execom" },
-    { label: "Startups", href: "/#startups" },
+    { label: "Startups", href: "/events" },
 ];
 
 const pages = [
@@ -89,7 +89,7 @@ export default function Footer() {
                             <a href="/execom" className="text-[13px] font-medium text-text-muted uppercase">Execom</a>
                             <a href="#" className="text-[13px] font-medium text-text-muted uppercase">History</a>
                             <a href="/#features" className="text-[13px] font-medium text-text-muted uppercase leading-tight">Why IEDC</a>
-                            <a href="/events" className="text-[13px] font-medium text-text-muted uppercase leading-tight">Events</a>
+                            <a href="/#events" className="text-[13px] font-medium text-text-muted uppercase leading-tight">Events</a>
                             <a href="#" className="text-[13px] font-medium text-text-muted uppercase leading-tight">Location</a>
                             <a href="#" className="text-[13px] font-medium text-text-muted uppercase leading-tight">Summit 2022</a>
                             <a href="#" className="text-[13px] font-medium text-text-muted uppercase leading-tight">SJCET Palai</a>

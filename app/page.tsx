@@ -2,7 +2,6 @@ import FloatingNavbar from "./components/FloatingNavbar";
 import HeroSection from "./components/HeroSection";
 import HabitsShowcase from "./components/HabitsShowcase";
 import BentoFeatures from "./components/BentoFeatures";
-import UseCaseTabs from "./components/UseCaseTabs";
 import SocialProofCards from "./components/SocialProofCards";
 import EventsShowcase from "./components/EventsShowcase";
 import MetricsSection from "./components/MetricsSection";
@@ -33,7 +32,6 @@ export default function Home() {
         <BentoFeatures />
         <SocialProofCards />
         <EventsShowcase />
-        <UseCaseTabs />
         <MetricsSection />
         <AISmartAssist />
         <TestimonialsGrid />

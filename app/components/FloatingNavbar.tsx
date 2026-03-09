@@ -6,9 +6,9 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const navLinks = [
-    { label: "About IEDC", href: "/#features" },
-    { label: "Events", href: "/#use-case" },
-    { label: "Startups", href: "/#startups" },
+    { label: "About IEDC", href: "/#about" },
+    { label: "Events", href: "/#events" },
+    { label: "Startups", href: "/events" },
     { label: "Execom", href: "/execom" },
 
 ];
@@ -64,7 +64,7 @@ export default function FloatingNavbar() {
                                 className="object-contain"
                             />
                         </div>
-                        <span className="font-semibold text-[15px] text-text-main">IEDC SJCET</span>
+                        <span className="font-semibold text-[15px] text-text-main whitespace-nowrap">IEDC SJCET</span>
                     </a>
 
                     {/* Desktop Nav Links */}

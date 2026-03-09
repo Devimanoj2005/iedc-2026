@@ -49,7 +49,7 @@ const users = [
 
 export default function SocialProofCards() {
     return (
-        <section className="py-20 md:py-32 max-w-6xl mx-auto px-6">
+        <section id="events" className="py-20 md:py-32 max-w-6xl mx-auto px-6">
             {/* Header */}
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
                 <motion.h2
