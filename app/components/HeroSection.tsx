@@ -4,12 +4,16 @@ import { motion } from "framer-motion";
 import { Play, Check } from "lucide-react";
 import Image from "next/image";
 
+import { FlipWords } from "@/app/components/ui/flip-words";
+
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
 };
 
 export default function HeroSection() {
+    const words = ["Innovative", "Creative", "Technical"];
+
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-0 overflow-hidden bg-transparent">
             {/* Background Image & Overlays */}
@@ -65,7 +69,7 @@ export default function HeroSection() {
                         <span className="bg-white/10 text-white text-[11px] font-bold px-3 py-1 rounded-full border border-white/5">
                             IEDC
                         </span>
-                        <span className="text-white/90 text-sm font-medium">Discovering Innovators Among Us</span>
+                        <span className="text-white/90 text-sm font-medium">Let Get Your Dreams Incubated </span>
                     </motion.div>
 
                     <motion.h1
@@ -73,11 +77,12 @@ export default function HeroSection() {
                         initial="initial"
                         animate="animate"
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-5xl md:text-7xl lg:text-[80px] font-bold tracking-tight text-white leading-[1.05] mb-6 drop-shadow-xl"
+                        className="text-4xl sm:text-5xl md:text-7xl lg:text-[80px] font-bold tracking-tight text-white leading-[1.05] mb-6 drop-shadow-xl"
                     >
-                        Discovering Creative
+                        Discovering
                         <br />
-                        students among us
+                        <FlipWords words={words} duration={1000} className="text-[#FF7A00] font-bold px-0" /><br />
+                        <span className="whitespace-nowrap">students among us</span>
                     </motion.h1>
 
                     <motion.p

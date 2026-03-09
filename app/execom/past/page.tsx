@@ -166,11 +166,19 @@ function PastExecomContent() {
                                                         {lead.letter}
                                                     </div>
                                                     <div className="absolute inset-0 bg-[#FF7A00]/10 group-hover:bg-[#FF7A00]/0 transition-colors duration-500">
-                                                        <img
-                                                            src={lead.image}
-                                                            alt={lead.name}
-                                                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
-                                                        />
+                                                        {lead.image ? (
+                                                            <img
+                                                                src={lead.image}
+                                                                alt={lead.name}
+                                                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                                                            />
+                                                        ) : (
+                                                            <div className="w-full h-full bg-gradient-to-br from-[#111] to-[#222] flex items-center justify-center">
+                                                                <span className="text-[#FF7A00]/20 text-9xl font-black group-hover:scale-110 transition-transform duration-700">
+                                                                    {lead.letter}
+                                                                </span>
+                                                            </div>
+                                                        )}
                                                     </div>
                                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                                                     <div className="absolute left-1/2 -translate-x-1/2 bottom-12 whitespace-nowrap hidden md:block group-hover:opacity-0 transition-opacity">
@@ -263,7 +271,13 @@ function PastExecomContent() {
                                 <span className="text-primary text-xs font-bold tracking-[0.2em] mb-4 block uppercase">{selectedLead.role}</span>
                                 <h2 className="text-4xl font-bold mb-6">{selectedLead.name}</h2>
                                 <div className="aspect-4/5 rounded-3xl overflow-hidden mb-8 border border-white/10">
-                                    <img src={selectedLead.image} alt={selectedLead.name} className="w-full h-full object-cover" />
+                                    {selectedLead.image ? (
+                                        <img src={selectedLead.image} alt={selectedLead.name} className="w-full h-full object-cover" />
+                                    ) : (
+                                        <div className="w-full h-full bg-gradient-to-br from-white/5 to-white/0 flex items-center justify-center">
+                                            <span className="text-white/10 text-9xl font-black">{selectedLead.letter}</span>
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="space-y-6">
                                     <div>

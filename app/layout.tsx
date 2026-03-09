@@ -9,13 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Habitline - Build habits that actually stick",
+  title: "IEDC BOOTCAMP SJCET",
   description:
-    "You see the right habits at the right time so your day never feels crowded. Track what matters, stay organized, and improve at your own pace.",
+    "",
   openGraph: {
-    title: "Habitline - Build habits that actually stick",
+    title: "IEDC BOOTCAMP SJCET",
     description:
-      "Launch your health or wellness app faster with this modern template designed for startups and digital health platforms.",
+      "",
     type: "website",
   },
 };

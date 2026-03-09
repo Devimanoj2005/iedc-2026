@@ -4,6 +4,7 @@ import HabitsShowcase from "./components/HabitsShowcase";
 import BentoFeatures from "./components/BentoFeatures";
 import UseCaseTabs from "./components/UseCaseTabs";
 import SocialProofCards from "./components/SocialProofCards";
+import EventsShowcase from "./components/EventsShowcase";
 import MetricsSection from "./components/MetricsSection";
 import AISmartAssist from "./components/AISmartAssist";
 import TestimonialsGrid from "./components/TestimonialsGrid";
@@ -30,8 +31,9 @@ export default function Home() {
         <HeroSection />
         <HabitsShowcase />
         <BentoFeatures />
-        <UseCaseTabs />
         <SocialProofCards />
+        <EventsShowcase />
+        <UseCaseTabs />
         <MetricsSection />
         <AISmartAssist />
         <TestimonialsGrid />
