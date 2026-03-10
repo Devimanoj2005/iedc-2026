@@ -2,6 +2,7 @@ import FloatingNavbar from "./components/FloatingNavbar";
 import HeroSection from "./components/HeroSection";
 import HabitsShowcase from "./components/HabitsShowcase";
 import BentoFeatures from "./components/BentoFeatures";
+import AboutSJCET from "./components/AboutSJCET";
 import EventSection from "./components/EventSection";
 import EventsShowcase from "./components/EventsShowcase";
 import GlobeSection from "./components/GlobeSection";
@@ -29,6 +30,7 @@ export default function Home() {
         <HeroSection />
         <HabitsShowcase />
         <BentoFeatures />
+        <AboutSJCET />
         <EventSection />
         <EventsShowcase />
         <GlobeSection />

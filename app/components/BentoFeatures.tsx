@@ -38,7 +38,7 @@ const pulseGlow = {
 
 export default function BentoFeatures() {
     return (
-        <section id="features" className="py-20 md:py-32 max-w-6xl mx-auto px-6">
+        <section id="features" className="py-16 md:py-24 max-w-6xl mx-auto px-6">
             {/* Header */}
             <div className="text-center mb-16">
                 <motion.div

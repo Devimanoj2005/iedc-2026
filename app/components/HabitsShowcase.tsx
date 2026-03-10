@@ -11,7 +11,7 @@ const fadeInUp = {
 
 export default function HabitsShowcase() {
     return (
-        <section className="relative py-20 md:py-32 overflow-hidden">
+        <section className="relative py-16 md:py-24 overflow-hidden">
             {/* Big text */}
             <div className="max-w-3xl mx-auto px-6 text-center mb-12">
                 <motion.h2

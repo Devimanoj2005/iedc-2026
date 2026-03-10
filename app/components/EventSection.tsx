@@ -61,7 +61,7 @@ export default function EventSection() {
     };
 
     return (
-        <section id="events" className="pt-20 md:pt-32 pb-0 overflow-x-clip">
+        <section id="events" className="pt-16 md:pt-24 pb-0 overflow-x-clip">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-12">
