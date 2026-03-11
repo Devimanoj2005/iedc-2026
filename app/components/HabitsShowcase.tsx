@@ -84,9 +84,7 @@ export default function HabitsShowcase() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <a
-                        href="https://"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="/login"
                         className="inline-flex items-center gap-2 bg-[#1D1D1F] text-white rounded-full px-6 py-3 text-sm font-medium hover:bg-[#333] transition-colors"
                     >
                         → Join IEDC

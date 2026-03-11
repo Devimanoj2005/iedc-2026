@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -100,12 +101,12 @@ export default function BentoFeatures() {
 
                         <div className="flex-1" />
 
-                        <button className="mt-6 flex items-center justify-between bg-white text-black rounded-2xl px-6 py-4 font-bold uppercase tracking-tighter hover:bg-[#FF6B4A] hover:text-white transition-all duration-300 shadow-xl">
+                        <Link href="/login" className="mt-6 flex items-center justify-between bg-white text-black rounded-2xl px-6 py-4 font-bold uppercase tracking-tighter hover:bg-[#FF6B4A] hover:text-white transition-all duration-300 shadow-xl">
                             Learn More
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
 
@@ -144,9 +145,9 @@ export default function BentoFeatures() {
                             <p className="text-gray-400 text-base leading-relaxed font-medium mb-8 max-w-md">
                                 Startup bootcamp provides students with assistance in projects through innovative ideas which can be utilised for future endeavours.
                             </p>
-                            <button className="bg-[#FF6B4A] text-white rounded-2xl px-10 py-4 font-black uppercase tracking-tighter hover:bg-white hover:text-black transition-all duration-300 shadow-2xl shadow-[#FF6B4A]/30">
+                            <Link href="/login" className="inline-block bg-[#FF6B4A] text-white rounded-2xl px-10 py-4 font-black uppercase tracking-tighter hover:bg-white hover:text-black transition-all duration-300 shadow-2xl shadow-[#FF6B4A]/30">
                                 Get Started
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>
